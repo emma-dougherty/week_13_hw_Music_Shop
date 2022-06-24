@@ -41,7 +41,7 @@ public class BagpipeTest {
         assertEquals(InstrumentType.WOODWIND, bagpipe.getInstrumentType());
     }
     @Test
-    public void hasGuitarType(){
+    public void hasBagpipeType(){
         assertEquals(BagpipeType.SCOTTISH, bagpipe.getBagpipeType());
     }
     @Test

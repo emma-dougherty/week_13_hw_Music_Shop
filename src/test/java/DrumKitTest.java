@@ -45,7 +45,7 @@ public class DrumKitTest {
         assertEquals(InstrumentType.PERCUSSION, drumKit.getInstrumentType());
     }
     @Test
-    public void hasGuitarType(){
+    public void hasDrumKitType(){
         assertEquals(DrumKitType.ACOUSTIC, drumKit.getDrumKitType());
     }
     @Test

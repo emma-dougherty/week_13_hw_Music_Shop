@@ -42,7 +42,7 @@ public class SynthesizerTest {
         assertEquals(InstrumentType.KEYBOARD, synthesizer.getInstrumentType());
     }
     @Test
-    public void hasGuitarType(){
+    public void hasSynthType(){
         assertEquals(SynthType.DIGITAL, synthesizer.getSynthType());
     }
     @Test
