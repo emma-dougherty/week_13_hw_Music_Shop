@@ -1,7 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
 import stock.Manufacturer;
-import stock.instruments.Instrument;
 import stock.instruments.InstrumentType;
 import stock.instruments.string.Guitar;
 import stock.instruments.string.GuitarType;
