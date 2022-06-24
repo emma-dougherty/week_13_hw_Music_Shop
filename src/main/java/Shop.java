@@ -31,7 +31,6 @@ public class Shop {
     
     public double getTotalPotentialProfit() {
         double total = 0;
-        
         for (Item item : stock){
             total += (item.calculateMarkup() * item.getBoughtPrice())/100;
         }
