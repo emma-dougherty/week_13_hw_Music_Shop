@@ -10,6 +10,7 @@ public enum Manufacturer {
     MARSHALL,
     MARTIN,
     ORANGE,
+    TAYLOR,
     RICO,
     ROLAND,
     YAMAHA;
