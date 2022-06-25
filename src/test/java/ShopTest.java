@@ -17,6 +17,7 @@ import stock.instruments.string.GuitarType;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class ShopTest {
     
@@ -79,6 +80,6 @@ public class ShopTest {
     }
     @Test
     public void canCatchExceptionIfFindItemByNameNull(){
-        assertEquals(null, shop.findItemByName(""));
+        assertNull(shop.findItemByName(""));
     }
 }
