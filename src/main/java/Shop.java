@@ -42,4 +42,20 @@ public class Shop {
     public double addDiscount(Item item, int discount) {
         return item.getSellPrice() - (item.getSellPrice() * discount / 100);
     }
+    
+    public Item findItemByName(String searchName)  {
+        try {
+            String searchLower = searchName.toLowerCase();
+            for (Item item : stock) {
+                String itemName = item.getName().toLowerCase();
+                if (itemName.equals(searchLower)) {
+                    return item;
+                }
+            }
+        }
+        catch (NullPointerException npe){
+            System.out.println("You can't have a null name");
+        }
+        return null;
+    }
 }

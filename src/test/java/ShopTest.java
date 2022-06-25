@@ -73,5 +73,12 @@ public class ShopTest {
     public void canAddDiscountToSpecificItemType(){
         assertEquals(4567.50, shop.addDiscount(guitar1, 10), 0.00);
     }
-    
+    @Test
+    public void canFindItemByName(){
+        assertEquals(guitar1, shop.findItemByName("Taylor 914ce V-Class"));
+    }
+    @Test
+    public void canCatchExceptionIfFindItemByNameNull(){
+        assertEquals(null, shop.findItemByName(""));
+    }
 }
