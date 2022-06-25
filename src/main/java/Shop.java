@@ -1,4 +1,6 @@
 import stock.Item;
+import stock.instruments.Instrument;
+import stock.instruments.string.Guitar;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -35,5 +37,9 @@ public class Shop {
             total += (item.calculateMarkup() * item.getBoughtPrice())/100;
         }
         return total;
+    }
+    
+    public double addDiscount(Item item, int discount) {
+        return item.getSellPrice() - (item.getSellPrice() * discount / 100);
     }
 }
