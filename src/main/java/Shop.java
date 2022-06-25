@@ -1,16 +1,12 @@
-import stock.Item;
-import stock.instruments.Instrument;
-import stock.instruments.string.Guitar;
-
-import java.lang.reflect.Array;
+import behaviours.ISell;
 import java.util.ArrayList;
 
 public class Shop {
     
     private String shopName;
-    private ArrayList<Item> stock;
+    private ArrayList<ISell> stock;
     
-    public Shop(String shopName, ArrayList<Item> stock) {
+    public Shop(String shopName, ArrayList<ISell> stock) {
         this.shopName = shopName;
         this.stock = stock;
     }
@@ -19,34 +15,34 @@ public class Shop {
         return shopName;
     }
     
-    public ArrayList<Item> getStock() {
+    public ArrayList<ISell> getStock() {
         return stock;
     }
     
-    public void addItemToStock (Item item){
+    public void addItemToStock (ISell item){
         this.stock.add(item);
     }
     
-    public void removeItemFromStock (Item item){
+    public void removeItemFromStock (ISell item){
         this.stock.remove(item);
     }
     
     public double getTotalPotentialProfit() {
         double total = 0;
-        for (Item item : stock){
+        for (ISell item : stock){
             total += (item.calculateMarkup() * item.getBoughtPrice())/100;
         }
         return total;
     }
     
-    public double addDiscount(Item item, int discount) {
+    public double addDiscount(ISell item, int discount) {
         return item.getSellPrice() - (item.getSellPrice() * discount / 100);
     }
     
-    public Item findItemByName(String searchName)  {
+    public ISell findItemByName(String searchName)  {
         try {
             String searchLower = searchName.toLowerCase();
-            for (Item item : stock) {
+            for (ISell item : stock) {
                 String itemName = item.getName().toLowerCase();
                 if (itemName.equals(searchLower)) {
                     return item;

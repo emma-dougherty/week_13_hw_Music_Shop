@@ -1,6 +1,6 @@
+import behaviours.ISell;
 import org.junit.Before;
 import org.junit.Test;
-import stock.Item;
 import stock.Manufacturer;
 import stock.accessories.Case;
 import stock.accessories.CaseType;
@@ -22,7 +22,7 @@ import static org.junit.Assert.assertNull;
 public class ShopTest {
     
     Shop shop;
-    ArrayList<Item> stock;
+    ArrayList<ISell> stock;
     Guitar guitar1;
     Guitar guitar2;
     Saxaphone saxaphone;
@@ -38,7 +38,7 @@ public class ShopTest {
         drumKit = new DrumKit("Roland TD-17KVX", "Poplar", Manufacturer.YAMAHA, 680.00, 986.00, InstrumentType.PERCUSSION, DrumKitType.ACOUSTIC, "red");
         synthesizer = new Synthesizer("Roland JUPITER-X 61-Key", "NA", Manufacturer.ROLAND, 1600.00, 2320.00, InstrumentType.KEYBOARD, SynthType.DIGITAL, 61);
         instrumentCase = new Case("Deluxe Protector Case SG", "Rugged polyethylene shell", Manufacturer.GIBSON, 120.00, 174, CaseType.GUITAR, "black");
-        stock = new ArrayList<Item>();
+        stock = new ArrayList<ISell>();
         stock.add(guitar1);
         stock.add(guitar2);
         stock.add(saxaphone);
